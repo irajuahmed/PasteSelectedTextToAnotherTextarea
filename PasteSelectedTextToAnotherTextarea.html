@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script>
+function getSelectedText(el) {
+    if (typeof el.selectionStart == "number") {
+        return el.value.slice(el.selectionStart, el.selectionEnd);
+    } else if (typeof document.selection != "undefined") {
+        var range = document.selection.createRange();
+        if (range.parentElement() == el) {
+            return range.text;
+        }
+    }
+    return "";
+}
+
+function copySelected(event) {
+    debugger;
+	if(event.ctrlKey && (event.which || event.keyCode))
+    var srcTextarea = document.getElementById("input");
+    var destTextarea = document.getElementsByClassName("selection");
+	var txtd=getSelectedText(srcTextarea);
+	for(i=0; i<destTextarea.length; i++){
+     destTextarea[i].value = txtd;
+	}
+}
+
+</script>
+<body>
+<textarea rows="5" cols="80" id="input" onkeyup="copySelected(event)" >One two three</textarea>
+<textarea rows="5" cols="80" id="selection" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection1" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection2" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection3" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection4" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection5" class="selection"></textarea>
+<textarea rows="5" cols="80" id="selection6" class="selection"></textarea></br>	
+<input type="button" onclick="copySelected(event)" value="copy selected">
+
+
+</body>
+</html> 
