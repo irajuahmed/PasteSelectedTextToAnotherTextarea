@@ -1,5 +1,7 @@
 # Paste Selected Text To Another Textarea
-It possible with pure JS to paste selected text into specified textarea? In my case, I want to select text in one of the textareas and when ctrl &amp; A is pressed, selected text would paste into last (V1) textarea.
+Someone asked that, Is it possible with pure JS to paste selected text into specified textarea? In my case, I want to select text in one of the textareas and when ctrl &amp; A is pressed, selected text would paste into last (V1) textarea.
+
+Yes, It's possible to that & I can. So I'm sharing my little experiance for Paste selected text to another textarea using pure JS in github .
 
 
 <h3 align="left">Connect with me:</h3>
