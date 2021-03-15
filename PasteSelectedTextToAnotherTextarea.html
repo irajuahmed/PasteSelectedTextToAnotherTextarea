@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Paste selected text to another textarea</title>
 <script>
 function getSelectedText(el) {
     if (typeof el.selectionStart == "number") {
@@ -34,7 +35,8 @@ function copySelected(event) {
 
 </script>
 <body>
-<textarea rows="5" cols="80" id="input" onkeyup="copySelected(event)" >One two three</textarea>
+<h1>Paste selected text to another textarea</h1><br>
+<textarea rows="5" cols="80" id="input" onkeyup="copySelected(event)" >One, two, three, four, five</textarea>
 <textarea rows="5" cols="80" id="selection" class="selection"></textarea>
 <textarea rows="5" cols="80" id="selection1" class="selection"></textarea>
 <textarea rows="5" cols="80" id="selection2" class="selection"></textarea>
@@ -42,7 +44,7 @@ function copySelected(event) {
 <textarea rows="5" cols="80" id="selection4" class="selection"></textarea>
 <textarea rows="5" cols="80" id="selection5" class="selection"></textarea>
 <textarea rows="5" cols="80" id="selection6" class="selection"></textarea></br>	
-<input type="button" onclick="copySelected(event)" value="copy selected">
+
 
 
 </body>
