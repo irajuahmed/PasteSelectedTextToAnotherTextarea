@@ -19,11 +19,11 @@ function copySelected(event) {
 	if(event.ctrlKey && (event.which || event.keyCode))
     var srcTextarea = document.getElementById("input");
     var destTextarea = document.getElementsByClassName("selection");
-	var txtd=getSelectedText(srcTextarea);
+	var pasteSelectedTextIntoTextarea=getSelectedText(srcTextarea);
 	
 	<!-- if u want to paste the text only last one of your textarea -->
 	
-	destTextarea[destTextarea.length-1].value = txtd;
+	destTextarea[destTextarea.length-1].value = pasteSelectedTextIntoTextarea;
 	
 	<!-- if u want to paste the text all of the textarea then use following code block -->
 	/*
